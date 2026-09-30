@@ -1,0 +1,204 @@
+/* =============================1=========================== */
+/* ======================global defaults====================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =========================header================================ */
+header {
+    background-color: #111827;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 3px solid tomato;
+}
+
+.header-text {
+    text-align: left;
+}
+
+header h1 {
+    margin: 0 0 5px;
+    font-size: 1.6rem;
+}
+
+header p {
+    margin: 0;
+    color: #cbd5e1;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin-top: 15px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #f05a4f;
+}
+
+/* =====================footer=========================== */
+footer {
+    background-color: #111827;
+    color: #ccc;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 14px;
+    border-top: 3px solid tomato;
+}
+
+/* ====================================2======================== */
+main {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+/* main div */
+.pricing-row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* inside div */
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card h2 {
+    margin: 0 0 10px;
+}
+
+.card hr {
+    width: 100%;
+    border: none;
+    border-top: 2px solid #eee;
+    margin: 20px 0;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.price span {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #888;
+}
+
+.tagline {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    flex: 1;
+}
+
+.features li {
+    padding: 6px 0;
+}
+
+.features li::before {
+    content: " ✔ ";
+    color: #16a34a;
+}
+
+/* buttons */
+button {
+    padding: 12px;
+    border: 2px solid #111827;
+    border-radius: 8px;
+    background: white;
+    color: #111827;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover,
+button:focus {
+    background-color: #111827;
+    transform: translateY(-3px);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------------popular card--------------------- */
+.card.popular {
+    position: relative;
+    border: 2px solid #f05a4f;
+    /* Highlight border */
+    transform: scale(1.05);
+    /* Slightly larger to stand out */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    /* Ensures it sits above other cards */
+}
+
+.card .badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f05a4f;
+    color: white;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.card.popular .price {
+    color: #f05a4f;
+    /* Match the price color to the theme */
+}
+
+.card.popular button {
+    background-color: #f05a4f;
+    color: white;
+    border: 2px solid #f05a4f;
+}
+
+.card.popular button:hover,
+.card.popular button:focus {
+    background-color: #4e0803;
+    /* Slightly darker on hover */
+    border-color: #d1483e;
+    box-shadow: 0 4px 10px rgba(240, 90, 79, 0.4);
+}
